@@ -3,7 +3,7 @@ public class Main {
 
 
         Product chicken = new Product("chicken", 50, 5);
-        Product corn = new Product("corn", 10, 5);
+        Product corn = new Product("corn", 15, 5);
         Product milk = new Product("milk", 100, 1);
 
         System.out.println(runProduct(chicken));

@@ -2,7 +2,7 @@ public class QuantityDiscount extends BaseDiscount {
 
     public QuantityDiscount(Discount discount) {
         super(discount);
-        this.description = "5% Discount on products with quantity of 5 or more!";
+        this.description = "10kr/each Discount on products with quantity of 5 or more!";
     }
 
 
