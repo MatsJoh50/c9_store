@@ -10,7 +10,7 @@ public class QuantityDiscount extends BaseDiscount {
     @Override
     protected boolean isApplicable(Product product) {
         //Added rule of minumum price to not make free prurchases
-        return product.quantity() >= 5 && product.price() >= 20;
+        return product.quantity() >= 5 && product.price() >= 15;
     }
 
     @Override
