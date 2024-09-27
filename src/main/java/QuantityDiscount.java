@@ -17,6 +17,6 @@ public class QuantityDiscount extends BaseDiscount {
     protected double calculateDiscount(Product product) {
         //10kr / produkt om över 5
         double discountValue = 10;
-        return product.quantity() * 10;
+        return product.quantity() * discountValue;
     }
 }
