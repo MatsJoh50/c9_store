@@ -2,18 +2,15 @@ public class QuantityDiscount extends BaseDiscount {
 
     public QuantityDiscount(Discount discount) {
         super(discount);
+        this.description = "5% Discount on products with quantity of 5 or more!";
     }
 
 
-    @Override
-    public String getDescription(Product product)
-    {
-        return "5% Discount on products with quantity of 5 or more!";
-    }
 
     @Override
     protected boolean isApplicable(Product product) {
-        return product.quantity() >= 5;
+        //Added rule of minumum price to not make free prurchases
+        return product.quantity() >= 5 && product.price() >= 20;
     }
 
     @Override

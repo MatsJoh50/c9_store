@@ -2,16 +2,13 @@ public class MilkDiscount extends BaseDiscount {
 
     public MilkDiscount(Discount discount) {
         super(discount);
+        this.description = "5% Discount on Milk";
     }
 
-    @Override
-    public String getDescription(Product product) {
-        return "5% Discount on Milk";
-    }
 
     @Override
     protected boolean isApplicable(Product product) {
-        return product.name().toLowerCase().equals("milk");
+        return product.name().equalsIgnoreCase("milk");
     }
 
     @Override

@@ -3,14 +3,11 @@ import java.time.LocalDate;
 
 public class FridayDiscount extends BaseDiscount{
 
-    public FridayDiscount(Discount discount) {
-        super(discount);
+    protected FridayDiscount(Discount nextDiscount) {
+        super(nextDiscount);
+        this.description = "10% Discount on Friday's!";
     }
 
-    @Override
-    public String getDescription(Product product) {
-        return "10% Discount on Friday's!";
-    }
 
     @Override
     protected boolean isApplicable(Product product) {

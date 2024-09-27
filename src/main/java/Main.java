@@ -3,20 +3,21 @@ public class Main {
 
 
         Product chicken = new Product("chicken", 50, 5);
-        Product chickenSmall = new Product("chicken", 50, 1);
         Product corn = new Product("corn", 10, 5);
-        Product cornSmall = new Product("corn", 10, 3);
         Product milk = new Product("milk", 100, 1);
 
         System.out.println(runProduct(chicken));
-//        System.out.println(runProduct(milk));
-
+        System.out.println(runProduct(milk));
+        System.out.println(runProduct(corn));
 
 
     }
 
     private static String runProduct(Product product) {
-        return "Actual price " + product.name() + ": " + totalDiscountPrice(product) + "(Full price:" + sumOfPrices(product) + ")\n" + totalDiscountDescription(product);
+        return "Actual price of " + product.name() + ": " + totalDiscountPrice(product)
+                + "(Full price:" + sumOfPrices(product) + ")\n"
+                + "Discounts used:" + "\n" + totalDiscountDescription(product)
+                + "\n####";
     }
 
     private static double totalDiscountPrice(Product product) {
